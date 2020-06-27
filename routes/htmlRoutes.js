@@ -9,6 +9,14 @@ function configureHtmlRoutes(app) {
     res.sendFile(path.join(__dirname, "../public/notes.html"));
   });
 
+  app.get("/styles.css", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/assets/css/styles.css"));
+  });
+
+  app.get("/index.js", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/assets/js/index.js"));
+  });
+
   app.get("/*", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
