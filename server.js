@@ -1,14 +1,13 @@
-var fs = require("fs");
-
-// Require dependencies
-var express = require("express");
+const fs = require("fs");
+const express = require("express");
+var db = fs.readFileSync("db.json");
+console.log(db);
 
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server
-var app = express();
 
-// Sets an initial port. We"ll use this later in our listener
-var PORT = process.env.PORT || 8080;
+var app = express();
+var PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -19,10 +18,12 @@ app.use(express.json());
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 
-require("./assets/js/index.js")(app);
+require("./routes/apiRoutes")(app);
+
+require("./routes/htmlRoutes")(app);
 
 // Start our server so that it can begin listening to client requests.
 // Log (server-side) when our server has started
-server.listen(PORT, function () {
+app.listen(PORT, function () {
   console.log("Server listening on PORT" + PORT);
 });

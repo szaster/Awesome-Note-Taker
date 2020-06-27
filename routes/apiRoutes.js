@@ -2,21 +2,20 @@
 // We are linking our routes to a series of "data" sources.
 // These data sources hold arrays of information on previous notes
 
-var noteStorage = require("../data/noteStorage");
+// var noteStorage = require("../data/noteStorage");
 
 // ROUTING
 
-module.exports = function (app) {
-  // API GET Requests
-  // Below code handles when users "visit" a page.
-  // In each of the below cases when a user visits a link
-  // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
+// API GET Requests
+// Below code handles when users "visit" a page.
+// In each of the below cases when a user visits a link
+// (ex: localhost:PORT/api/admin... they are shown a
+//JSON of the data in the table)
+
+function configureApiRoutes(app) {
   app.get("/api/notes", function (req, res) {
-    res.json(noteStorage);
+    res.json(db);
   });
-
-// app.post("api/"),function(req,res){
-
 }
 
-};
+module.exports = configureApiRoutes;
