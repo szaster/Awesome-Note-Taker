@@ -14,8 +14,15 @@
 
 function configureApiRoutes(app) {
   app.get("/api/notes", function (req, res) {
-    res.json(db);
+    res.json(mynotes);
   });
+  app.get("/api/*", function (req, res) {
+    res.json(mynotes);
+  });
+  app.post("/api/notes"),
+    function (req, res) {
+      fs;
+    };
 }
 
 module.exports = configureApiRoutes;
