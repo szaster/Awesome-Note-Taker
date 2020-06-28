@@ -14,5 +14,11 @@ function readDB() {
   return dbData;
 }
 
+function writeDB() {
+  const buffer = fs.writeFileSync(destination);
+  const dbData = JSON.parse(buffer);
+  return dbData;
+}
+
 //Module exports new instance of a class Store
 module.exports = new Store();

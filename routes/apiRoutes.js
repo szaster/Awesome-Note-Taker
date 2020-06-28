@@ -18,8 +18,16 @@ function handleApiNotes(req, res) {
   res.json(notes);
 }
 
+function handleDeleteNote(req, res) {
+  // store.deleteById(req.params.id);
+  res.sendStatus(200);
+}
+
 function configureApiRoutes(app) {
+  // define a handler for GET /api/notes
   app.get("/api/notes", handleApiNotes);
+  // define a handler for DELETE /api/notes
+  app.delete("/api/notes/:id", handleDeleteNote);
 }
 
 // app.get("/api/*", function (req, res) {
