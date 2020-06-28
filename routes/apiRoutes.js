@@ -11,8 +11,10 @@
 // (ex: localhost:PORT/api/admin... they are shown a
 //JSON of the data in the table)
 
+const store = require("../db/store");
+
 function handleApiNotes(req, res) {
-  const notes = [];
+  const notes = store.getAll();
   res.json(notes);
 }
 
