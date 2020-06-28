@@ -1,5 +1,5 @@
-const fs = require("fs");
 const express = require("express");
+// const routes = require("./routes");
 
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server

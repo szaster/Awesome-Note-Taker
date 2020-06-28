@@ -5,24 +5,30 @@
 // var noteStorage = require("../data/noteStorage");
 
 // ROUTING
-
 // API GET Requests
 // Below code handles when users "visit" a page.
 // In each of the below cases when a user visits a link
 // (ex: localhost:PORT/api/admin... they are shown a
 //JSON of the data in the table)
 
-function configureApiRoutes(app) {
-  app.get("/api/notes", function (req, res) {
-    res.json(mynotes);
-  });
-  app.get("/api/*", function (req, res) {
-    res.json(mynotes);
-  });
-  app.post("/api/notes"),
-    function (req, res) {
-      fs;
-    };
+function handleApiNotes(req, res) {
+  const notes = [];
+  res.json(notes);
 }
+
+function configureApiRoutes(app) {
+  app.get("/api/notes", handleApiNotes);
+}
+
+// app.get("/api/*", function (req, res) {
+//   res.json(notes);
+// });
+
+//   app.post("/api/notes"),
+//     function (req, res) {
+//       const newNote = req.bo;
+//       fs.writeFile();
+//     };
+// }
 
 module.exports = configureApiRoutes;
