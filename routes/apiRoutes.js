@@ -2,8 +2,6 @@
 // We are linking our routes to a series of "data" sources.
 // These data sources hold arrays of information on previous notes
 
-// var noteStorage = require("../data/noteStorage");
-
 // ROUTING
 // API GET Requests
 // Below code handles when users "visit" a page.

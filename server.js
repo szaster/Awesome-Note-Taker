@@ -5,7 +5,7 @@ const express = require("express");
 // This sets up the basic properties for our express server
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
