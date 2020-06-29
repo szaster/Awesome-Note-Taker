@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-// const { uuid } = require("uuidv4");
+const uuid = require("uuid");
 const destination = path.join(__dirname, "db.json");
 
 function readDB() {
@@ -30,6 +30,14 @@ class Store {
     });
     //  writes notes back to the file
     writeDB(filteredNotes);
+  }
+  saveNewNote(newNote) {
+    //read current notes
+    const myNotes = readDB();
+    // save a new note
+    note["id"] = uuid.v4();
+    myNotes.push(note);
+    writeDB(newNote);
   }
 }
 

@@ -23,23 +23,18 @@ function handleDeleteNote(req, res) {
   res.sendStatus(200);
 }
 
+function handlePostNote(req, res) {
+  // res.send("Save my new note!);
+  store.saveNewNote(newNote);
+}
+
 function configureApiRoutes(app) {
   // define a handler for GET /api/notes
   app.get("/api/notes", handleApiNotes);
   // define a handler for DELETE /api/notes
   app.delete("/api/notes/:id", handleDeleteNote);
-  // app.post("/api/notes")
+  // define a handler for POST /api/notes
+  app.post("/api/notes", handlePostNote);
 }
-
-// app.get("/api/*", function (req, res) {
-//   res.json(notes);
-// });
-
-//   app.post("/api/notes"),
-//     function (req, res) {
-//       const newNote = req.bo;
-//       fs.writeFile();
-//     };
-// }
 
 module.exports = configureApiRoutes;
