@@ -23,9 +23,9 @@ function handleDeleteNote(req, res) {
   res.sendStatus(200);
 }
 
-function handlePostNote(req, res) {
-  // res.send("Save my new note!);
-  store.saveNewNote(newNote);
+function handlePostNote(request, res) {
+  store.saveNewNote(request.body);
+  res.sendStatus(200);
 }
 
 function configureApiRoutes(app) {

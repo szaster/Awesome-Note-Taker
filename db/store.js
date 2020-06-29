@@ -35,9 +35,9 @@ class Store {
     //read current notes
     const myNotes = readDB();
     // save a new note
-    note["id"] = uuid.v4();
-    myNotes.push(note);
-    writeDB(newNote);
+    newNote["id"] = uuid.v4();
+    myNotes.push(newNote);
+    writeDB(myNotes);
   }
 }
 
