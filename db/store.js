@@ -1,12 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+// const { uuid } = require("uuidv4");
 const destination = path.join(__dirname, "db.json");
-
-class Store {
-  getAll() {
-    return readDB();
-  }
-}
 
 function readDB() {
   const buffer = fs.readFileSync(destination);
@@ -14,10 +9,28 @@ function readDB() {
   return dbData;
 }
 
-function writeDB() {
-  const buffer = fs.writeFileSync(destination);
-  const dbData = JSON.parse(buffer);
-  return dbData;
+//This function takes an object, converts it to a string(serialises)
+// and then writes it to a file
+function writeDB(data) {
+  const serialiseData = JSON.stringify(data);
+  fs.writeFileSync(destination, serialiseData);
+}
+
+class Store {
+  getAll() {
+    // return Object.values(readDB());
+    return readDB();
+  }
+  deleteById(id) {
+    //read current notes
+    const notes = readDB();
+    //  delete a note with given id
+    const filteredNotes = notes.filter((note) => {
+      return note.id !== id;
+    });
+    //  writes notes back to the file
+    writeDB(filteredNotes);
+  }
 }
 
 //Module exports new instance of a class Store
