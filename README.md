@@ -1,6 +1,12 @@
 # Note-taker application.
 
-## Site
+https://github.com/szaster/Note-Taker-Express-HW11
+
+https://szaster.github.io/Note-Taker-Express-HW11/
+
+## Live Site on the web
+
+https://glacial-tundra-17782.herokuapp.com/
 
 ## Description
 
@@ -18,18 +24,19 @@ This application can be used to write, save, and delete notes, todos, thoughts, 
 
 ## Installation and usage
 
-Use the app deployed to Heroku, and/or clone the code on your machine and install and import dependencies with npm install, npm install express, npm install uuid-- save.
-Run the application with a command node server.js in a terminal.
+Use the app deployed to Heroku, and/or clone the code on your machine and install and import dependencies with `npm install`.
+
+Run the application with a command `npm start` in a terminal.
 
 ## Credits
 
 UT Austin bootcamp for the front-end code.
 
-Web framework for Node.js: [Express](https://www.npmjs.com/package/express)
+Web framework for Node.js: [Express](https://www.npmjs.com/package/express).
 
-Extension for VS code: [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+Extension for VS code: [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
 
-UUID - universally unique identifier that is generated using random numbers: [Version 4 UUID generator](https://www.npmjs.com/package/uuid)
+UUID - universally unique identifier that is generated using random numbers: [Version 4 UUID generator](https://www.npmjs.com/package/uuid).
 
 ## License
 
@@ -39,4 +46,4 @@ MIT license.
 
 If you any additional questions you can reach me via my [Github user profile](https://www.github.com/szaster).
 
-You can also [write me directly](mailto:szaster@protonmail.com).
+You also can [file an issue](https://github.com/szaster/Note-Taker-Express-HW11/issues) if you find a bug.
